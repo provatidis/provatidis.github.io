@@ -222,6 +222,12 @@ h1 em {
   line-height:1.65;
   margin:0 0 16px;
 }
+.hero-intro .hero-note {
+  font-size:15px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:12px 0 0;
+}
 .text-link {
   font-size:13px;
   font-weight:500;
@@ -280,6 +286,9 @@ h2 em {
   position:relative;
   overflow:hidden;
   color:#304235;
+}
+.project-visual:focus-visible {
+  outline-offset:-5px;
 }
 .passiko-visual {
   background:#e8eddd;
@@ -908,7 +917,7 @@ h3 {
     font-size:30px;
   }
 }
-/* Personal interests share the page’s quiet, two-column rhythm. */
+/* A smaller heading and an inset rule give personal interests a quieter rhythm. */
 .curiosities-section {
   display:grid;
   grid-template-columns:.8fr 1.4fr;
@@ -918,11 +927,19 @@ h3 {
   border-top:1px solid var(--line);
 }
 .curiosities-heading h2 {
-  font-size:40px;
-  margin-top:20px;
+  font-family:var(--serif);
+  font-size:32px;
+  font-style:italic;
+  letter-spacing:-.025em;
+  margin-top:16px;
+}
+.curiosities-heading h2 em {
+  white-space:nowrap;
 }
 .curiosity-content {
   max-width:610px;
+  border-left:2px solid var(--line);
+  padding-left:24px;
   font-size:15px;
   line-height:1.8;
   color:var(--muted);
@@ -941,18 +958,22 @@ main:focus {
     gap:50px;
   }
   .curiosities-heading h2 {
-    font-size:36px;
+    font-size:30px;
   }
 }
 @media(max-width:750px) {
   .curiosities-section {
     grid-template-columns:1fr;
-    gap:26px;
+    gap:20px;
     margin-top:0;
     padding:35px 0 38px;
   }
   .curiosities-heading h2 {
-    font-size:37px;
+    font-size:30px;
+    margin-top:12px;
+  }
+  .curiosity-content {
+    padding-left:16px;
   }
 }
 @media(max-width:390px) {
