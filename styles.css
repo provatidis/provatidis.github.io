@@ -275,17 +275,10 @@ h2 em {
   position:relative;
   z-index:1;
 }
-.product-wordmark {
-  font-size:20px;
-  letter-spacing:-.055em;
-  font-weight:500;
-  display:flex;
-  align-items:center;
-  gap:7px;
-}
-.passiko-symbol {
-  font-size:34px;
-  line-height:20px;
+.passiko-logo {
+  display:block;
+  width:165px;
+  height:40px;
 }
 .visual-label {
   font-size:11px;
@@ -315,10 +308,13 @@ h2 em {
   height:auto;
 }
 .chart-axis {
-  display:flex;
-  justify-content:space-between;
-  margin-top:8px;
-  font-size:11px;
+  margin:12px 0 0;
+  font-size:12px;
+  line-height:1.5;
+  text-align:center;
+}
+.chart-axis span {
+  white-space:nowrap;
 }
 .chart-legend {
   display:flex;
@@ -461,14 +457,23 @@ h3 {
   margin-top:16px;
 }
 .inflow-wordmark {
-  font-family:var(--serif);
-  font-size:23px;
-  letter-spacing:-.06em;
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#18203b;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:26px;
+  font-weight:600;
+  letter-spacing:-1px;
+  line-height:40px;
 }
-.inflow-wordmark span {
-  font-size:29px;
-  padding-left:3px;
-  font-family:var(--sans);
+.inflow-wordmark svg {
+  width:39px;
+  height:28px;
+  fill:none;
+  stroke:#2843ef;
+  stroke-width:4.5;
+  stroke-linecap:round;
 }
 .focus-illustration {
   display:flex;
