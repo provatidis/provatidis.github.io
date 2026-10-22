@@ -222,12 +222,6 @@ h1 em {
   line-height:1.65;
   margin:0 0 16px;
 }
-.hero-intro .hero-note {
-  font-size:15px;
-  line-height:1.6;
-  color:var(--muted);
-  margin:12px 0 0;
-}
 .text-link {
   font-size:13px;
   font-weight:500;
@@ -236,7 +230,7 @@ h1 em {
   align-items:center;
 }
 .work-section {
-  padding-top:64px;
+  padding-top:48px;
 }
 .section-heading {
   display:flex;
@@ -600,26 +594,18 @@ h3 {
   letter-spacing:.06em;
 }
 .about-section {
-  margin-top:64px;
+  margin-top:0;
   display:grid;
   grid-template-columns:.8fr 1.4fr;
   gap:64px;
-  padding-top:52px;
-  padding-bottom:48px;
-  border-top:1px solid var(--line);
+  padding-top:44px;
+  padding-bottom:40px;
+  border-bottom:1px solid var(--line);
 }
 .about-label h2 {
   font-size:43px;
   margin-top:22px;
   line-height:1.08;
-}
-.about-asterisk {
-  font-size:72px;
-  color:#a2b980;
-  display:block;
-  margin-top:40px;
-  font-weight:300;
-  line-height:1;
 }
 .about-content {
   padding-top:0;
@@ -630,6 +616,9 @@ h3 {
   line-height:1.8;
   color:var(--muted);
   margin:0 0 19px;
+}
+.about-content p:last-child {
+  margin-bottom:0;
 }
 .about-content .about-lead {
   font-size:24px;
@@ -833,7 +822,7 @@ h3 {
     margin-bottom:9px;
   }
   .work-section {
-    padding-top:43px;
+    padding-top:35px;
   }
   .section-heading {
     align-items:start;
@@ -906,25 +895,14 @@ h3 {
     font-size:12px;
   }
   .about-section {
-    margin-top:48px;
     grid-template-columns:1fr;
-    gap:26px;
-    padding-top:35px;
-    padding-bottom:44px;
-  }
-  .about-label {
-    position:relative;
+    gap:20px;
+    padding-top:32px;
+    padding-bottom:32px;
   }
   .about-label h2 {
     font-size:37px;
     margin-top:16px;
-  }
-  .about-asterisk {
-    position:absolute;
-    right:18px;
-    top:24px;
-    margin:0;
-    font-size:64px;
   }
   .about-content {
     padding-top:0;
@@ -988,7 +966,7 @@ h3 {
   display:grid;
   grid-template-columns:.8fr 1.4fr;
   gap:64px;
-  margin-top:0;
+  margin-top:48px;
   padding:46px 0 48px;
   border-top:1px solid var(--line);
 }
@@ -1031,7 +1009,7 @@ main:focus {
   .curiosities-section {
     grid-template-columns:1fr;
     gap:20px;
-    margin-top:0;
+    margin-top:36px;
     padding:35px 0 38px;
   }
   .curiosities-heading h2 {
