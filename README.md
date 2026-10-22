@@ -2,7 +2,7 @@
 
 My personal website: a few projects, curiosities, and a little about me.
 
-[provatidis.github.io](https://provatidis.github.io/)
+[provatidis.com](https://provatidis.com/)
 
 ## Local preview
 
