@@ -172,31 +172,19 @@ a:focus-visible,button:focus-visible {
   transform:translateY(0);
 }
 .hero {
-  padding-top:70px;
-  padding-bottom:24px;
+  padding-top:52px;
+  padding-bottom:40px;
   border-bottom:1px solid var(--line);
   display:grid;
   grid-template-columns:1.4fr 1fr;
   column-gap:60px;
 }
-.tiny-cross {
-  color:#7e9566;
-  font-size:20px;
-  display:inline-block;
-  vertical-align:middle;
-  line-height:1;
-  margin-right:10px;
-}
-.hero .eyebrow {
-  font-size:12px;
-  letter-spacing:.16em;
-}
 h1 {
-  font-size:clamp(64px,7.4vw,104px);
+  font-size:clamp(52px,5.9vw,84px);
   font-weight:400;
   letter-spacing:-.04em;
   line-height:1.02;
-  margin:30px 0 44px;
+  margin:0;
   position:relative;
 }
 h1 em {
@@ -208,7 +196,7 @@ h1 em {
   max-width:350px;
   justify-self:end;
   align-self:center;
-  margin-top:37px;
+  margin-top:0;
 }
 .intro-line {
   display:block;
@@ -220,7 +208,7 @@ h1 em {
 .hero-intro p {
   font-size:18px;
   line-height:1.65;
-  margin:0 0 16px;
+  margin:0;
 }
 .text-link {
   font-size:13px;
@@ -700,10 +688,10 @@ h3 {
 }
 @media(min-width:1500px) {
   .hero {
-    padding-top:84px;
+    padding-top:64px;
   }
   .hero h1 {
-    font-size:112px;
+    font-size:90px;
   }
 }
 @media(max-width:1000px) {
@@ -715,13 +703,10 @@ h3 {
     grid-template-columns:1.4fr 1fr;
   }
   .hero h1 {
-    font-size:78px;
+    font-size:62px;
   }
   .hero-intro {
     max-width:270px;
-  }
-  .hero .eyebrow {
-    font-size:12px;
   }
   h2 {
     font-size:30px;
@@ -788,21 +773,14 @@ h3 {
     margin-left:auto;
   }
   .hero {
-    padding-top:48px;
+    padding-top:36px;
+    padding-bottom:28px;
     grid-template-columns:1fr;
     gap:0;
   }
-  .hero .eyebrow {
-    font-size:12px;
-    letter-spacing:.1em;
-  }
-  .tiny-cross {
-    font-size:16px;
-    margin-right:7px;
-  }
   .hero h1 {
-    font-size:clamp(67px,12vw,92px);
-    margin:28px 0 28px;
+    font-size:clamp(54px,9.6vw,74px);
+    margin:0 0 22px;
   }
   .hero-intro {
     justify-self:start;
@@ -814,7 +792,7 @@ h3 {
   }
   .hero-intro p {
     font-size:18px;
-    margin-bottom:9px;
+    margin-bottom:0;
   }
   .work-section {
     padding-top:35px;
@@ -937,9 +915,6 @@ h3 {
   }
 }
 @media(max-width:390px) {
-  .hero h1 {
-    font-size:65px;
-  }
   .section-heading {
     display:block;
   }
@@ -1017,7 +992,7 @@ main:focus {
 }
 @media(max-width:390px) {
   .hero h1 {
-    font-size:clamp(54px,16.5vw,65px);
+    font-size:clamp(44px,13.2vw,52px);
   }
   .chart-legend .illustration-label {
     width:100%;
