@@ -517,8 +517,8 @@ h3 {
   opacity:1;
 }
 .gaugecraft-visual {
-  background:#e5eceb;
-  color:#34534f;
+  background:#eef0f3;
+  color:#536174;
   padding:28px;
   min-height:365px;
   border-right:1px solid var(--line);
@@ -529,7 +529,7 @@ h3 {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:#172d2e;
+  color:#202733;
   font-size:25px;
   font-weight:600;
   letter-spacing:-.04em;
@@ -547,7 +547,7 @@ h3 {
   height:auto;
 }
 .gaugecraft-illustration .chart-dot {
-  background:#3d6d68;
+  background:#536174;
 }
 .gaugecraft-axis,.gaugecraft-legend {
   display:flex;
@@ -570,7 +570,7 @@ h3 {
 .gaugecraft-legend i {
   width:7px;
   height:7px;
-  border:1.5px solid #3d6d68;
+  border:1.5px solid #536174;
   border-radius:50%;
 }
 .gaugecraft-legend span:last-child {
