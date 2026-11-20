@@ -34,7 +34,7 @@
     <meta name="twitter:image" content="https://provatidis.com/assets/social-card.png?v=provatidis-com">
     <meta name="twitter:image:alt" content="Apostolos Provatidis — Independent developer. Projects and curiosities.">
     <meta name="twitter:site" content="@provatidis">
-    <link rel="stylesheet" href="./styles.css?v=f2894b652dac">
+    <link rel="stylesheet" href="./styles.css?v=70db75f60f7d">
     <script src="./script.js" defer></script>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Person","name":"Apostolos Provatidis","jobTitle":"Independent developer","url":"https://provatidis.com/","sameAs":["https://github.com/provatidis","https://www.linkedin.com/in/apostolos-provatidis/","https://x.com/provatidis"]}
@@ -113,27 +113,30 @@
             <div class="project-links"><a href="https://gaugecraft.sh/" target="_blank" rel="noopener noreferrer">Explore Gaugecraft <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/provatidis/gaugecraft" target="_blank" rel="noopener noreferrer" aria-label="Gaugecraft source on GitHub">Source <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
-        <article class="project project-featured" id="overwatch" aria-labelledby="overwatch-title">
-          <a class="project-visual overwatch-visual" href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer" aria-label="Open OVER watch, the Overtime tracker (opens in a new tab)">
-            <svg width="60" height="60" viewBox="0 0 100 100" fill="currentColor" aria-hidden="true">
-              <circle cx="50" cy="56" r="31" fill="none" stroke="currentColor" stroke-width="9"/>
-              <rect x="43" y="10" width="14" height="7" rx="2.5"/>
-              <rect x="47.5" y="15" width="5" height="8"/>
-              <rect x="74.5" y="24" width="9" height="6" rx="2" transform="rotate(45 79 27)"/>
-              <g fill="var(--overwatch-hand)" stroke="var(--overwatch-hand)">
-                <line x1="50" y1="56" x2="61" y2="37" stroke-width="6.5" stroke-linecap="round"/>
-                <circle cx="50" cy="56" r="6"/>
-              </g>
-            </svg>
-            <h3 id="overwatch-title">OVER <em>watch</em></h3>
+        <article class="project project-featured project-overwatch" id="overwatch" aria-labelledby="overwatch-title">
+          <a class="project-visual overwatch-visual" href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer" aria-label="Open OVER watch, a daily tracker for Overtime (opens in a new tab)">
+            <div class="visual-topline"><span class="overwatch-wordmark"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="56" r="31" fill="none" stroke="currentColor" stroke-width="9"/><rect x="43" y="10" width="14" height="7" rx="2.5" fill="currentColor"/><rect x="47.5" y="15" width="5" height="8" fill="currentColor"/><rect x="74.5" y="24" width="9" height="6" rx="2" fill="currentColor" transform="rotate(45 79 27)"/><line x1="50" y1="56" x2="61" y2="37" stroke="#c6f05b" stroke-width="6.5" stroke-linecap="round"/><circle cx="50" cy="56" r="6" fill="#c6f05b"/></svg><span>OVER <em>watch</em></span></span><span class="visual-label">DAILY · ONCHAIN</span></div>
+            <div class="overwatch-illustration" aria-hidden="true">
+              <div class="chart-caption"><span>What the house made, and what went to buybacks.</span><span class="chart-dot"></span></div>
+              <!-- Schematic, not live data: the house result varies while buybacks run at a steady daily rate. -->
+              <svg viewBox="0 0 620 200" fill="none">
+                <defs><pattern id="overwatch-grid" width="62" height="44" patternUnits="userSpaceOnUse"><path d="M62 0H0V44" stroke="#e9ede3" stroke-opacity=".08"/></pattern></defs>
+                <rect width="620" height="176" fill="url(#overwatch-grid)"/>
+                <g fill="#c6f05b"><path d="M32 176V75Q32 71 36 71H54Q58 71 58 75V176Z"/><path d="M132 176V61Q132 57 136 57H154Q158 57 158 61V176Z"/><path d="M232 176V98Q232 94 236 94H254Q258 94 258 98V176Z"/><path d="M332 176V36Q332 32 336 32H354Q358 32 358 36V176Z"/><path d="M432 176V81Q432 77 436 77H454Q458 77 458 81V176Z"/><path d="M532 176V54Q532 50 536 50H554Q558 50 558 54V176Z"/></g>
+                <g fill="#e9ede3" fill-opacity=".72"><path d="M62 176V139Q62 135 66 135H84Q88 135 88 139V176Z"/><path d="M162 176V139Q162 135 166 135H184Q188 135 188 139V176Z"/><path d="M262 176V141Q262 137 266 137H284Q288 137 288 141V176Z"/><path d="M362 176V139Q362 135 366 135H384Q388 135 388 139V176Z"/><path d="M462 176V139Q462 135 466 135H484Q488 135 488 139V176Z"/><path d="M562 176V141Q562 137 566 137H584Q588 137 588 141V176Z"/></g>
+                <path d="M0 176.5H620" stroke="#e9ede3" stroke-opacity=".35"/>
+              </svg>
+              <p class="overwatch-axis"><span>Buybacks hold steady.</span><span>Months →</span></p>
+              <div class="overwatch-legend"><span><i class="result"></i>House result <i class="buyback"></i>Bought back</span><span>ILLUSTRATIVE</span></div>
+            </div>
           </a>
           <div class="project-content">
+            <div class="project-top"><span class="project-number">04</span><span class="project-category">DEFI · TOKEN TRACKER</span></div>
+            <h3 id="overwatch-title">OVER watch</h3>
             <p class="project-subtitle">A daily tracker for Overtime’s onchain sportsbook.</p>
-            <p>See what the house won or lost, how much it spent buying back OVER tokens, and how its treasury changed over time.</p>
-            <div class="project-links">
-              <a href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer">Open tracker <span aria-hidden="true">↗</span></a>
-              <a class="source-link" href="https://github.com/provatidis/overwatch" target="_blank" rel="noopener noreferrer" aria-label="OVER watch source on GitHub">Source <span aria-hidden="true">↗</span></a>
-            </div>
+            <p>See what the house won or lost, how much of it went to buying back OVER, and where the rest went. Daily checks flag a cut in buybacks or OVER leaving the treasury.</p>
+            <div class="tags"><span>Updated daily</span><span>Open source</span><span>I hold OVER</span></div>
+            <div class="project-links"><a href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer">Open OVER watch <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/provatidis/overwatch" target="_blank" rel="noopener noreferrer" aria-label="OVER watch source on GitHub">Source <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
       </section>
