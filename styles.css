@@ -11,6 +11,22 @@
   --contact-ink:#2a402e;
   --contact-muted:#58654f;
   --contact-line:#cdd6bf;
+  --light-mark-display:block;
+  --dark-mark-display:none;
+  --teren-paper:#e8eddd;
+  --teren-ink:#31543a;
+  --teren-secondary:#6d7958;
+  --inflow-paper:#eeebf1;
+  --inflow-muted:#62586a;
+  --inflow-ink:#18203b;
+  --inflow-accent:#2843ef;
+  --gaugecraft-paper:#eef0f3;
+  --gaugecraft-muted:#536174;
+  --gaugecraft-ink:#202733;
+  --overwatch-paper:#f2f3ec;
+  --overwatch-muted:#55605a;
+  --overwatch-ink:#0e1511;
+  --overwatch-accent:#4f7a16;
   --serif:Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Arial,sans-serif;
   color-scheme:light;
@@ -30,6 +46,22 @@
   --contact-ink:#e6ecdf;
   --contact-muted:#b6c3af;
   --contact-line:#465a43;
+  --light-mark-display:none;
+  --dark-mark-display:block;
+  --teren-paper:#213127;
+  --teren-ink:#c5dcb6;
+  --teren-secondary:#a7b59a;
+  --inflow-paper:#24212c;
+  --inflow-muted:#cfc5d7;
+  --inflow-ink:#eaf0ff;
+  --inflow-accent:#a6b6ff;
+  --gaugecraft-paper:#1f252d;
+  --gaugecraft-muted:#a6b0bf;
+  --gaugecraft-ink:#e9edf3;
+  --overwatch-paper:#0e1511;
+  --overwatch-muted:#9aa69c;
+  --overwatch-ink:#e9ede3;
+  --overwatch-accent:#c6f05b;
   color-scheme:dark;
 }
 @media(prefers-color-scheme:dark) {
@@ -44,6 +76,22 @@
     --contact-ink:#e6ecdf;
     --contact-muted:#b6c3af;
     --contact-line:#465a43;
+    --light-mark-display:none;
+    --dark-mark-display:block;
+    --teren-paper:#213127;
+    --teren-ink:#c5dcb6;
+    --teren-secondary:#a7b59a;
+    --inflow-paper:#24212c;
+    --inflow-muted:#cfc5d7;
+    --inflow-ink:#eaf0ff;
+    --inflow-accent:#a6b6ff;
+    --gaugecraft-paper:#1f252d;
+    --gaugecraft-muted:#a6b0bf;
+    --gaugecraft-ink:#e9edf3;
+    --overwatch-paper:#0e1511;
+    --overwatch-muted:#9aa69c;
+    --overwatch-ink:#e9ede3;
+    --overwatch-accent:#c6f05b;
     color-scheme:dark;
   }
 }
@@ -98,7 +146,8 @@ a:focus-visible,button:focus-visible {
 .identity {
   display:flex;
   align-items:center;
-  gap:14px;
+  min-width:44px;
+  min-height:44px;
 }
 .monogram {
   font-size:34px;
@@ -108,12 +157,6 @@ a:focus-visible,button:focus-visible {
 }
 .monogram span {
   color:#7c9861;
-}
-.identity-name {
-  font-size:12px;
-  line-height:1.45;
-  font-weight:500;
-  letter-spacing:.01em;
 }
 .site-header nav {
   display:flex;
@@ -267,13 +310,13 @@ h2 em {
   display:block;
   position:relative;
   overflow:hidden;
-  color:#304235;
 }
 .project-visual:focus-visible {
   outline-offset:-5px;
 }
 .teren-visual {
-  background:#e8eddd;
+  background:var(--teren-paper);
+  color:var(--teren-ink);
   min-height:365px;
   padding:28px;
   display:flex;
@@ -290,9 +333,14 @@ h2 em {
   z-index:1;
 }
 .teren-logo {
-  display:block;
   width:145px;
   height:40px;
+}
+.mark-on-light {
+  display:var(--light-mark-display);
+}
+.mark-on-dark {
+  display:var(--dark-mark-display);
 }
 .visual-label {
   font-size:12px;
@@ -315,7 +363,7 @@ h2 em {
 .chart-dot {
   width:5px;
   height:5px;
-  background:#78955d;
+  background:currentColor;
   border-radius:50%;
 }
 .liquidity-illustration svg {
@@ -346,14 +394,14 @@ h2 em {
   white-space:nowrap;
 }
 .chart-legend i {
-  width:10px;
+  width:16px;
   height:2px;
-  background:#31543a;
+  background:currentColor;
 }
 .chart-legend span:nth-child(2) i {
   background:none;
   height:0;
-  border-top:2px dashed #6d7958;
+  border-top:2px dashed var(--teren-secondary);
 }
 .chart-legend .illustration-label {
   margin-left:auto;
@@ -444,8 +492,8 @@ h3 {
   color:var(--muted);
 }
 .inflow-visual {
-  background:#eeebf1;
-  color:#62586a;
+  background:var(--inflow-paper);
+  color:var(--inflow-muted);
   padding:28px;
   min-height:365px;
   border-right:1px solid var(--line);
@@ -461,7 +509,7 @@ h3 {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:#18203b;
+  color:var(--inflow-ink);
   font-family:Arial,Helvetica,sans-serif;
   font-size:26px;
   font-weight:600;
@@ -472,7 +520,7 @@ h3 {
   width:39px;
   height:28px;
   fill:none;
-  stroke:#2843ef;
+  stroke:var(--inflow-accent);
   stroke-width:4.5;
   stroke-linecap:round;
 }
@@ -517,8 +565,8 @@ h3 {
   opacity:1;
 }
 .gaugecraft-visual {
-  background:#eef0f3;
-  color:#536174;
+  background:var(--gaugecraft-paper);
+  color:var(--gaugecraft-muted);
   padding:28px;
   min-height:365px;
   border-right:1px solid var(--line);
@@ -529,7 +577,7 @@ h3 {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:#202733;
+  color:var(--gaugecraft-ink);
   font-size:25px;
   font-weight:600;
   letter-spacing:-.04em;
@@ -545,9 +593,6 @@ h3 {
 .gaugecraft-illustration svg {
   width:100%;
   height:auto;
-}
-.gaugecraft-illustration .chart-dot {
-  background:#536174;
 }
 .gaugecraft-axis,.gaugecraft-legend {
   display:flex;
@@ -570,15 +615,15 @@ h3 {
 .gaugecraft-legend i {
   width:7px;
   height:7px;
-  border:1.5px solid #536174;
+  border:1.5px solid currentColor;
   border-radius:50%;
 }
 .gaugecraft-legend span:last-child {
   letter-spacing:.06em;
 }
 .overwatch-visual {
-  background:#0e1511;
-  color:#9aa69c;
+  background:var(--overwatch-paper);
+  color:var(--overwatch-muted);
   padding:28px;
   min-height:365px;
   border-right:1px solid var(--line);
@@ -586,13 +631,13 @@ h3 {
   flex-direction:column;
 }
 .overwatch-visual .visual-label {
-  color:#e9ede3;
+  color:var(--overwatch-ink);
 }
 .overwatch-wordmark {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:#e9ede3;
+  color:var(--overwatch-ink);
   font-size:25px;
   font-weight:600;
   letter-spacing:-.04em;
@@ -614,8 +659,8 @@ h3 {
   width:100%;
   height:auto;
 }
-.overwatch-illustration .chart-dot {
-  background:#c6f05b;
+.overwatch-illustration .chart-dot,.overwatch-legend i.result {
+  background:var(--overwatch-accent);
 }
 .overwatch-axis,.overwatch-legend {
   display:flex;
@@ -640,16 +685,22 @@ h3 {
   height:8px;
   border-radius:2px;
 }
-.overwatch-legend i.result {
-  background:#c6f05b;
-}
 .overwatch-legend i.buyback {
-  background:#e9ede3;
+  background:var(--overwatch-ink);
   opacity:.72;
   margin-left:10px;
 }
 .overwatch-legend span:last-child {
   letter-spacing:.06em;
+}
+.project-overwatch .tags {
+  margin:0 0 14px;
+}
+.project-content .project-disclosure {
+  margin:auto 0 12px;
+}
+.project-disclosure + .project-links {
+  margin-top:0;
 }
 .about-section {
   margin-top:0;
@@ -827,12 +878,6 @@ h3 {
     padding-top:18px;
     padding-bottom:4px;
   }
-  .identity-name {
-    font-size:12px;
-  }
-  .identity {
-    gap:10px;
-  }
   .monogram {
     font-size:30px;
   }
@@ -992,6 +1037,9 @@ h3 {
 @media(max-width:390px) {
   .section-heading {
     display:block;
+  }
+  .project-links a {
+    gap:6px;
   }
   .all-projects {
     margin-top:16px;

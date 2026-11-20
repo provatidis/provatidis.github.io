@@ -34,7 +34,7 @@
     <meta name="twitter:image" content="https://provatidis.com/assets/social-card.png?v=provatidis-com">
     <meta name="twitter:image:alt" content="Apostolos Provatidis — Independent developer. Projects and curiosities.">
     <meta name="twitter:site" content="@provatidis">
-    <link rel="stylesheet" href="./styles.css?v=70db75f60f7d">
+    <link rel="stylesheet" href="./styles.css?v=25ba45d589ff">
     <script src="./script.js" defer></script>
     <script type="application/ld+json">
       {"@context":"https://schema.org","@type":"Person","name":"Apostolos Provatidis","jobTitle":"Independent developer","url":"https://provatidis.com/","sameAs":["https://github.com/provatidis","https://www.linkedin.com/in/apostolos-provatidis/","https://x.com/provatidis"]}
@@ -43,7 +43,7 @@
   <body id="top">
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header wrap">
-      <a class="identity" href="#top" aria-label="Apostolos Provatidis, home"><span class="monogram" aria-hidden="true">ap<span>.</span></span><span class="identity-name">Apostolos<br>Provatidis</span></a>
+      <a class="identity" href="#top" aria-label="Apostolos Provatidis, home"><span class="monogram" aria-hidden="true">ap<span>.</span></span></a>
       <nav aria-label="Main navigation"><a href="#about">About</a><a href="#work">Projects</a><a href="#curiosities">Curiosities</a><a href="#contact">Contact</a></nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme" hidden><svg class="moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M20.5 14a8.7 8.7 0 0 1-10.6-10.5A8.8 8.8 0 1 0 20.5 14Z"/></svg><svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.4 1.4m11.2 11.2L19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg></button>
     </header>
@@ -63,18 +63,21 @@
         <div class="section-heading"><div><p class="eyebrow">02 / PROJECTS</p><h2 id="work-title">Some things <em>I’ve made.</em></h2></div><a class="text-link all-projects" href="https://github.com/provatidis?tab=repositories" target="_blank" rel="noopener noreferrer">All repositories <span aria-hidden="true">↗</span></a></div>
         <article class="project project-featured project-teren">
           <a class="project-visual teren-visual" href="https://teren.sh/" target="_blank" rel="noopener noreferrer" aria-label="Open Teren, a playground for understanding DeFi (opens in a new tab)">
-            <div class="visual-topline"><img class="teren-logo" src="./assets/teren-logo-light.svg" width="145" height="40" alt="Teren"><span class="visual-label">LOOK CLOSELY.</span></div>
+            <div class="visual-topline">
+              <img class="teren-logo mark-on-light" src="./assets/teren-logo-light.svg" width="145" height="40" alt="Teren">
+              <img class="teren-logo mark-on-dark" src="./assets/teren-logo-dark.svg" width="145" height="40" alt="Teren">
+            </div>
             <div class="liquidity-illustration" aria-hidden="true">
               <div class="chart-caption"><span>Token balances change with price.</span><span class="chart-dot"></span></div>
               <!-- A schematic of token composition, not a comparison of investment returns. -->
               <svg viewBox="0 0 620 245" fill="none">
-                <defs><pattern id="grid" width="62" height="49" patternUnits="userSpaceOnUse"><path d="M 62 0 L 0 0 0 49" stroke="#294537" stroke-opacity=".09" stroke-width="1"/></pattern></defs>
+                <defs><pattern id="grid" width="62" height="49" patternUnits="userSpaceOnUse"><path d="M 62 0 L 0 0 0 49" stroke="currentColor" stroke-opacity=".09" stroke-width="1"/></pattern></defs>
                 <rect width="620" height="245" fill="url(#grid)"/>
-                <path d="M0 28C120 28 210 80 310 122.5S500 217 620 217" stroke="#31543a" stroke-width="3"/>
-                <path d="M0 217C120 217 210 165 310 122.5S500 28 620 28" stroke="#6d7958" stroke-width="3" stroke-dasharray="7 6"/>
-                <path d="M310 0V245" stroke="#31543a" stroke-opacity=".35" stroke-dasharray="3 5"/>
-                <circle cx="310" cy="122.5" r="8" fill="#dce8bf"/>
-                <circle cx="310" cy="122.5" r="4" fill="#31543a"/>
+                <path d="M0 28C120 28 210 80 310 122.5S500 217 620 217" stroke="currentColor" stroke-width="3"/>
+                <path d="M0 217C120 217 210 165 310 122.5S500 28 620 28" stroke="var(--teren-secondary)" stroke-width="3" stroke-dasharray="7 6"/>
+                <path d="M310 0V245" stroke="currentColor" stroke-opacity=".35" stroke-dasharray="3 5"/>
+                <circle cx="310" cy="122.5" r="8" fill="var(--teren-paper)"/>
+                <circle cx="310" cy="122.5" r="4" fill="currentColor"/>
               </svg>
               <p class="chart-axis">Token A price in Token B <span>increases&nbsp;→</span></p>
               <div class="chart-legend"><span><i></i> Token A</span><span><i></i> Token B</span><span class="illustration-label">ILLUSTRATIVE TOKEN MIX</span></div>
@@ -83,22 +86,43 @@
           <div class="project-content"><div class="project-top"><span class="project-number">01</span><span class="project-category">DEFI · LEARNING &amp; EXPERIMENTS</span></div><h3>Teren</h3><p class="project-subtitle">A playground for understanding DeFi.</p><p>Learn how liquidity and lending work through interactive lessons and experiments. Test assumptions, compare outcomes, and inspect historical liquidity cases and on-chain snapshots.</p><div class="tags"><span>Open source</span><span>No wallet needed</span></div><div class="project-links"><a href="https://teren.sh/" target="_blank" rel="noopener noreferrer">Explore Teren <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/provatidis/teren" target="_blank" rel="noopener noreferrer" aria-label="Teren source on GitHub">Source <span aria-hidden="true">↗</span></a></div></div>
         </article>
         <article class="project project-featured project-inflow">
-            <a class="project-visual inflow-visual" href="https://provatidis.com/inflow/" target="_blank" rel="noopener noreferrer" aria-label="Open in flow, a companion for focused work (opens in a new tab)"><div class="visual-topline"><span class="inflow-wordmark"><svg viewBox="0 0 58 38" aria-hidden="true"><path d="M5 12C23-2 31 27 53 12M5 27C22 13 31 40 49 27"/></svg><span>in flow</span></span><span class="visual-label">A LITTLE SPACE TO FOCUS.</span></div><div class="focus-illustration" aria-hidden="true"><div class="focus-orbit"><svg viewBox="0 0 210 210"><circle cx="105" cy="105" r="96" fill="none" stroke="#d5d1db" stroke-width="1"/><circle cx="105" cy="105" r="96" fill="none" stroke="#82738b" stroke-width="2" stroke-dasharray="430 604" transform="rotate(-90 105 105)"/></svg><div><span class="focus-caption">ONE THING AT A TIME</span><span class="focus-time">25<span>:</span>00</span></div></div></div></a>
-            <div class="project-content"><div class="project-top"><span class="project-number">02</span><span class="project-category">FOCUS · EVERYDAY TOOLS</span></div><h3>in flow</h3><p class="project-subtitle">A quiet companion for focused work.</p><p>For writing, study, or time to yourself. Set an intention, work at your own pace, and leave a note for next time.</p><div class="tags"><span>Saved in your browser</span><span>Timed or open ended</span></div><div class="project-links"><a href="https://provatidis.com/inflow/" target="_blank" rel="noopener noreferrer">Open in flow <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/provatidis/inflow" target="_blank" rel="noopener noreferrer" aria-label="in flow source on GitHub">Source <span aria-hidden="true">↗</span></a></div></div>
+          <a class="project-visual inflow-visual" href="https://provatidis.com/inflow/" aria-label="Open in flow, a companion for focused work">
+            <div class="visual-topline">
+              <span class="inflow-wordmark"><svg viewBox="0 0 58 38" aria-hidden="true"><path d="M5 12C23-2 31 27 53 12M5 27C22 13 31 40 49 27"/></svg><span>in flow</span></span>
+              <span class="visual-label">A LITTLE SPACE TO FOCUS.</span>
+            </div>
+            <div class="focus-illustration" aria-hidden="true">
+              <div class="focus-orbit">
+                <svg viewBox="0 0 210 210" fill="none" stroke="currentColor">
+                  <circle cx="105" cy="105" r="96" stroke-width="1" stroke-opacity=".22"/>
+                  <circle cx="105" cy="105" r="96" stroke-width="2" stroke-opacity=".85" stroke-dasharray="430 604" transform="rotate(-90 105 105)"/>
+                </svg>
+                <div><span class="focus-caption">ONE THING AT A TIME</span><span class="focus-time">25<span>:</span>00</span></div>
+              </div>
+            </div>
+          </a>
+            <div class="project-content"><div class="project-top"><span class="project-number">02</span><span class="project-category">FOCUS · EVERYDAY TOOLS</span></div><h3>in flow</h3><p class="project-subtitle">A quiet companion for focused work.</p><p>For writing, study, or time to yourself. Set an intention, work at your own pace, and leave a note for next time.</p><div class="tags"><span>Saved in your browser</span><span>Timed or open ended</span></div><div class="project-links"><a href="https://provatidis.com/inflow/">Open in flow <span aria-hidden="true">→</span></a><a class="source-link" href="https://github.com/provatidis/inflow" target="_blank" rel="noopener noreferrer" aria-label="in flow source on GitHub">Source <span aria-hidden="true">↗</span></a></div></div>
         </article>
         <article class="project project-featured project-gaugecraft" id="gaugecraft">
           <a class="project-visual gaugecraft-visual" href="https://gaugecraft.sh/" target="_blank" rel="noopener noreferrer" aria-label="Open Gaugecraft, a research dashboard for Aero allocation (opens in a new tab)">
-            <div class="visual-topline"><span class="gaugecraft-wordmark"><img src="./assets/gaugecraft-logo.svg?v=6f24429c2ae2" width="36" height="36" alt="">gaugecraft</span><span class="visual-label">ALLOCATION RESEARCH</span></div>
+            <div class="visual-topline">
+              <span class="gaugecraft-wordmark">
+                <img class="mark-on-light" src="./assets/gaugecraft-logo.svg?v=6f24429c2ae2" width="36" height="36" alt="">
+                <img class="mark-on-dark" src="./assets/gaugecraft-logo-dark.svg" width="36" height="36" alt="">
+                gaugecraft
+              </span>
+              <span class="visual-label">ALLOCATION RESEARCH</span>
+            </div>
             <div class="gaugecraft-illustration" aria-hidden="true">
               <div class="chart-caption"><span>Pool rewards over time.</span><span class="chart-dot"></span></div>
               <!-- Schematic observations with a visible gap; not live data or a return forecast. -->
               <svg viewBox="0 0 620 200" fill="none">
-                <defs><pattern id="gaugecraft-grid" width="62" height="50" patternUnits="userSpaceOnUse"><path d="M62 0H0V50" stroke="#536174" stroke-opacity=".12"/></pattern></defs>
+                <defs><pattern id="gaugecraft-grid" width="62" height="50" patternUnits="userSpaceOnUse"><path d="M62 0H0V50" stroke="currentColor" stroke-opacity=".12"/></pattern></defs>
                 <rect width="620" height="200" fill="url(#gaugecraft-grid)"/>
-                <rect x="270" width="80" height="200" fill="#eef0f3"/>
-                <path d="M24 142L80 117L136 128L192 72L248 93M372 112L428 80L484 99L540 132L596 108" stroke="#536174" stroke-width="2.5" stroke-linejoin="round"/>
-                <g fill="#eef0f3" stroke="#536174" stroke-width="2.5"><circle cx="24" cy="142" r="4"/><circle cx="80" cy="117" r="4"/><circle cx="136" cy="128" r="4"/><circle cx="192" cy="72" r="4"/><circle cx="248" cy="93" r="4"/><circle cx="372" cy="112" r="4"/><circle cx="428" cy="80" r="4"/><circle cx="484" cy="99" r="4"/><circle cx="540" cy="132" r="4"/><circle cx="596" cy="108" r="4"/></g>
-                <path d="M270 180V188H350V180" stroke="#536174" stroke-width="1.5"/>
+                <rect x="270" width="80" height="200" fill="var(--gaugecraft-paper)"/>
+                <path d="M24 142L80 117L136 128L192 72L248 93M372 112L428 80L484 99L540 132L596 108" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+                <g fill="var(--gaugecraft-paper)" stroke="currentColor" stroke-width="2.5"><circle cx="24" cy="142" r="4"/><circle cx="80" cy="117" r="4"/><circle cx="136" cy="128" r="4"/><circle cx="192" cy="72" r="4"/><circle cx="248" cy="93" r="4"/><circle cx="372" cy="112" r="4"/><circle cx="428" cy="80" r="4"/><circle cx="484" cy="99" r="4"/><circle cx="540" cy="132" r="4"/><circle cx="596" cy="108" r="4"/></g>
+                <path d="M270 180V188H350V180" stroke="currentColor" stroke-width="1.5"/>
               </svg>
               <p class="gaugecraft-axis"><span>Gaps stay visible.</span><span>Time →</span></p>
               <div class="gaugecraft-legend"><span><i></i> Observed snapshots</span><span>ILLUSTRATIVE</span></div>
@@ -114,17 +138,17 @@
           </div>
         </article>
         <article class="project project-featured project-overwatch" id="overwatch" aria-labelledby="overwatch-title">
-          <a class="project-visual overwatch-visual" href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer" aria-label="Open OVER watch, a daily tracker for Overtime (opens in a new tab)">
-            <div class="visual-topline"><span class="overwatch-wordmark"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="56" r="31" fill="none" stroke="currentColor" stroke-width="9"/><rect x="43" y="10" width="14" height="7" rx="2.5" fill="currentColor"/><rect x="47.5" y="15" width="5" height="8" fill="currentColor"/><rect x="74.5" y="24" width="9" height="6" rx="2" fill="currentColor" transform="rotate(45 79 27)"/><line x1="50" y1="56" x2="61" y2="37" stroke="#c6f05b" stroke-width="6.5" stroke-linecap="round"/><circle cx="50" cy="56" r="6" fill="#c6f05b"/></svg><span>OVER <em>watch</em></span></span><span class="visual-label">DAILY · ONCHAIN</span></div>
+          <a class="project-visual overwatch-visual" href="https://provatidis.com/overwatch/" aria-label="Open OVER watch, a daily tracker for Overtime">
+            <div class="visual-topline"><span class="overwatch-wordmark"><svg width="34" height="34" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="56" r="31" fill="none" stroke="currentColor" stroke-width="9"/><rect x="43" y="10" width="14" height="7" rx="2.5" fill="currentColor"/><rect x="47.5" y="15" width="5" height="8" fill="currentColor"/><rect x="74.5" y="24" width="9" height="6" rx="2" fill="currentColor" transform="rotate(45 79 27)"/><line x1="50" y1="56" x2="61" y2="37" stroke="var(--overwatch-accent)" stroke-width="6.5" stroke-linecap="round"/><circle cx="50" cy="56" r="6" fill="var(--overwatch-accent)"/></svg><span>OVER <em>watch</em></span></span><span class="visual-label">DAILY · ONCHAIN</span></div>
             <div class="overwatch-illustration" aria-hidden="true">
               <div class="chart-caption"><span>What the house made, and what went to buybacks.</span><span class="chart-dot"></span></div>
               <!-- Schematic, not live data: the house result varies while buybacks run at a steady daily rate. -->
               <svg viewBox="0 0 620 200" fill="none">
-                <defs><pattern id="overwatch-grid" width="62" height="44" patternUnits="userSpaceOnUse"><path d="M62 0H0V44" stroke="#e9ede3" stroke-opacity=".08"/></pattern></defs>
+                <defs><pattern id="overwatch-grid" width="62" height="44" patternUnits="userSpaceOnUse"><path d="M62 0H0V44" stroke="var(--overwatch-ink)" stroke-opacity=".08"/></pattern></defs>
                 <rect width="620" height="176" fill="url(#overwatch-grid)"/>
-                <g fill="#c6f05b"><path d="M32 176V75Q32 71 36 71H54Q58 71 58 75V176Z"/><path d="M132 176V61Q132 57 136 57H154Q158 57 158 61V176Z"/><path d="M232 176V98Q232 94 236 94H254Q258 94 258 98V176Z"/><path d="M332 176V36Q332 32 336 32H354Q358 32 358 36V176Z"/><path d="M432 176V81Q432 77 436 77H454Q458 77 458 81V176Z"/><path d="M532 176V54Q532 50 536 50H554Q558 50 558 54V176Z"/></g>
-                <g fill="#e9ede3" fill-opacity=".72"><path d="M62 176V139Q62 135 66 135H84Q88 135 88 139V176Z"/><path d="M162 176V139Q162 135 166 135H184Q188 135 188 139V176Z"/><path d="M262 176V141Q262 137 266 137H284Q288 137 288 141V176Z"/><path d="M362 176V139Q362 135 366 135H384Q388 135 388 139V176Z"/><path d="M462 176V139Q462 135 466 135H484Q488 135 488 139V176Z"/><path d="M562 176V141Q562 137 566 137H584Q588 137 588 141V176Z"/></g>
-                <path d="M0 176.5H620" stroke="#e9ede3" stroke-opacity=".35"/>
+                <g fill="var(--overwatch-accent)"><path d="M32 176V75Q32 71 36 71H54Q58 71 58 75V176Z"/><path d="M132 176V61Q132 57 136 57H154Q158 57 158 61V176Z"/><path d="M232 176V98Q232 94 236 94H254Q258 94 258 98V176Z"/><path d="M332 176V36Q332 32 336 32H354Q358 32 358 36V176Z"/><path d="M432 176V81Q432 77 436 77H454Q458 77 458 81V176Z"/><path d="M532 176V54Q532 50 536 50H554Q558 50 558 54V176Z"/></g>
+                <g fill="var(--overwatch-ink)" fill-opacity=".72"><path d="M62 176V139Q62 135 66 135H84Q88 135 88 139V176Z"/><path d="M162 176V139Q162 135 166 135H184Q188 135 188 139V176Z"/><path d="M262 176V141Q262 137 266 137H284Q288 137 288 141V176Z"/><path d="M362 176V139Q362 135 366 135H384Q388 135 388 139V176Z"/><path d="M462 176V139Q462 135 466 135H484Q488 135 488 139V176Z"/><path d="M562 176V141Q562 137 566 137H584Q588 137 588 141V176Z"/></g>
+                <path d="M0 176.5H620" stroke="var(--overwatch-ink)" stroke-opacity=".35"/>
               </svg>
               <p class="overwatch-axis"><span>Buybacks hold steady.</span><span>Months →</span></p>
               <div class="overwatch-legend"><span><i class="result"></i>House result <i class="buyback"></i>Bought back</span><span>ILLUSTRATIVE</span></div>
@@ -135,8 +159,9 @@
             <h3 id="overwatch-title">OVER watch</h3>
             <p class="project-subtitle">A daily tracker for Overtime’s onchain sportsbook.</p>
             <p>See what the house won or lost, how much of it went to buying back OVER, and where the rest went. Daily checks flag a cut in buybacks or OVER leaving the treasury.</p>
-            <div class="tags"><span>Updated daily</span><span>Open source</span><span>I hold OVER</span></div>
-            <div class="project-links"><a href="https://provatidis.com/overwatch/" target="_blank" rel="noopener noreferrer">Open OVER watch <span aria-hidden="true">↗</span></a><a class="source-link" href="https://github.com/provatidis/overwatch" target="_blank" rel="noopener noreferrer" aria-label="OVER watch source on GitHub">Source <span aria-hidden="true">↗</span></a></div>
+            <div class="tags"><span>Updated daily</span><span>Open source</span></div>
+            <p class="project-disclosure">I hold OVER.</p>
+            <div class="project-links"><a href="https://provatidis.com/overwatch/">Open OVER watch <span aria-hidden="true">→</span></a><a class="source-link" href="https://github.com/provatidis/overwatch" target="_blank" rel="noopener noreferrer" aria-label="OVER watch source on GitHub">Source <span aria-hidden="true">↗</span></a></div>
           </div>
         </article>
       </section>
