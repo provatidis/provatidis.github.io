@@ -11,6 +11,9 @@
   --contact-ink:#2a402e;
   --contact-muted:#58654f;
   --contact-line:#cdd6bf;
+  --overwatch-paper:#f2f3ec;
+  --overwatch-ink:#0e1511;
+  --overwatch-hand:#4f7a16;
   --serif:Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Arial,sans-serif;
   color-scheme:light;
@@ -30,6 +33,9 @@
   --contact-ink:#e6ecdf;
   --contact-muted:#b6c3af;
   --contact-line:#465a43;
+  --overwatch-paper:#0e1511;
+  --overwatch-ink:#e9ede3;
+  --overwatch-hand:#c6f05b;
   color-scheme:dark;
 }
 @media(prefers-color-scheme:dark) {
@@ -44,6 +50,9 @@
     --contact-ink:#e6ecdf;
     --contact-muted:#b6c3af;
     --contact-line:#465a43;
+    --overwatch-paper:#0e1511;
+    --overwatch-ink:#e9ede3;
+    --overwatch-hand:#c6f05b;
     color-scheme:dark;
   }
 }
@@ -257,7 +266,7 @@ h2 em {
 .project-featured>* {
   min-width:0;
 }
-.project:not(.project-inflow):not(.project-gaugecraft) h3 {
+.project-teren h3 {
   font-size:34px;
 }
 .project-featured+.project-featured {
@@ -576,6 +585,26 @@ h3 {
 .gaugecraft-legend span:last-child {
   letter-spacing:.06em;
 }
+.overwatch-visual {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  padding:24px;
+  background:var(--overwatch-paper);
+  color:var(--overwatch-ink);
+  border-right:1px solid var(--line);
+}
+.overwatch-visual h3 {
+  margin:0;
+  font-weight:600;
+  white-space:nowrap;
+}
+.overwatch-visual em {
+  font-family:var(--serif);
+  font-weight:400;
+}
 .about-section {
   margin-top:0;
   display:grid;
@@ -823,11 +852,14 @@ h3 {
     min-height:0;
     padding:25px;
   }
-  .gaugecraft-visual {
+  .gaugecraft-visual,.overwatch-visual {
     border-right:0;
     border-bottom:1px solid var(--line);
     min-height:0;
     padding:25px;
+  }
+  .overwatch-visual {
+    padding:18px 14px;
   }
   .inflow-visual {
     border-right:0;
