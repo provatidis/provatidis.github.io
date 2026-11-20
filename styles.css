@@ -11,9 +11,6 @@
   --contact-ink:#2a402e;
   --contact-muted:#58654f;
   --contact-line:#cdd6bf;
-  --overwatch-paper:#f2f3ec;
-  --overwatch-ink:#0e1511;
-  --overwatch-hand:#4f7a16;
   --serif:Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Arial,sans-serif;
   color-scheme:light;
@@ -33,9 +30,6 @@
   --contact-ink:#e6ecdf;
   --contact-muted:#b6c3af;
   --contact-line:#465a43;
-  --overwatch-paper:#0e1511;
-  --overwatch-ink:#e9ede3;
-  --overwatch-hand:#c6f05b;
   color-scheme:dark;
 }
 @media(prefers-color-scheme:dark) {
@@ -50,9 +44,6 @@
     --contact-ink:#e6ecdf;
     --contact-muted:#b6c3af;
     --contact-line:#465a43;
-    --overwatch-paper:#0e1511;
-    --overwatch-ink:#e9ede3;
-    --overwatch-hand:#c6f05b;
     color-scheme:dark;
   }
 }
@@ -586,24 +577,79 @@ h3 {
   letter-spacing:.06em;
 }
 .overwatch-visual {
+  background:#0e1511;
+  color:#9aa69c;
+  padding:28px;
+  min-height:365px;
+  border-right:1px solid var(--line);
+  display:flex;
+  flex-direction:column;
+}
+.overwatch-visual .visual-label {
+  color:#e9ede3;
+}
+.overwatch-wordmark {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  color:#e9ede3;
+  font-size:25px;
+  font-weight:600;
+  letter-spacing:-.04em;
+  line-height:40px;
+}
+.overwatch-wordmark svg {
+  flex:none;
+}
+.overwatch-wordmark em {
+  font-family:var(--serif);
+  font-weight:400;
+  letter-spacing:-.02em;
+}
+.overwatch-illustration {
+  margin:auto 0;
+  padding-top:28px;
+}
+.overwatch-illustration svg {
+  width:100%;
+  height:auto;
+}
+.overwatch-illustration .chart-dot {
+  background:#c6f05b;
+}
+.overwatch-axis,.overwatch-legend {
   display:flex;
   flex-wrap:wrap;
   align-items:center;
-  justify-content:center;
+  justify-content:space-between;
   gap:12px;
-  padding:24px;
-  background:var(--overwatch-paper);
-  color:var(--overwatch-ink);
-  border-right:1px solid var(--line);
+  font-size:12px;
+  line-height:1.5;
+  margin:12px 0 0;
 }
-.overwatch-visual h3 {
-  margin:0;
-  font-weight:600;
-  white-space:nowrap;
+.overwatch-legend {
+  margin-top:20px;
 }
-.overwatch-visual em {
-  font-family:var(--serif);
-  font-weight:400;
+.overwatch-legend span:first-child {
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.overwatch-legend i {
+  width:8px;
+  height:8px;
+  border-radius:2px;
+}
+.overwatch-legend i.result {
+  background:#c6f05b;
+}
+.overwatch-legend i.buyback {
+  background:#e9ede3;
+  opacity:.72;
+  margin-left:10px;
+}
+.overwatch-legend span:last-child {
+  letter-spacing:.06em;
 }
 .about-section {
   margin-top:0;
@@ -857,9 +903,6 @@ h3 {
     border-bottom:1px solid var(--line);
     min-height:0;
     padding:25px;
-  }
-  .overwatch-visual {
-    padding:18px 14px;
   }
   .inflow-visual {
     border-right:0;
