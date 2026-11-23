@@ -178,21 +178,21 @@
             </div>
             <figure class="vvv-ledger">
               <figcaption>VVV issued and burned over 90 days</figcaption>
-              <!-- supply.windows["90"] in https://github.com/provatidis/vvvwatch/blob/ce3354a22f9aaaa504a5b43cf5f1cc4bb500bc2d/data/latest.json -->
-              <dl id="vvv-amounts" class="vvv-amounts">
-                <div><dt>Issued</dt><dd>555,188 VVV</dd></div>
-                <div class="vvv-burned" style="--bar-width:23.548%"><dt>Burned</dt><dd>130,736 VVV</dd></div>
+              <!-- Fallback from supply.windows["90"] in https://vvv.watch/data/latest.json (22 Nov 2026). script.js replaces it with the latest snapshot. -->
+              <dl id="vvv-amounts" class="vvv-amounts" data-source="https://vvv.watch/data/latest.json">
+                <div id="vvv-issued-row"><dt>Issued</dt><dd id="vvv-issued">555,188 VVV</dd></div>
+                <div id="vvv-burned-row" class="vvv-burned" style="--bar-width:23.548%"><dt>Burned</dt><dd id="vvv-burned">130,736 VVV</dd></div>
               </dl>
-              <p id="vvv-window"><time datetime="2026-08-25">25 Aug</time> – <time datetime="2026-11-22">22 Nov 2026</time></p>
+              <p id="vvv-window"><time id="vvv-start" datetime="2026-08-25">25 Aug</time> – <time id="vvv-end" datetime="2026-11-22">22 Nov 2026</time></p>
             </figure>
           </a>
           <div class="project-content">
             <div class="project-top"><span class="project-number">05</span><span class="project-category">DEFI · TOKEN SUPPLY</span></div>
             <h3 id="vvvwatch-title">VVV watch</h3>
-            <p class="project-subtitle">A daily ledger of Venice AI’s token supply.</p>
-            <p>See how much new VVV staking creates, how much is burned, and which transactions are behind Venice’s monthly buybacks.</p>
-            <div class="tags"><span>30- and 90-day views</span><span>Open source</span></div>
-            <p class="project-disclosure">I hold VVV.</p>
+            <p class="project-subtitle">A daily tracker for Venice’s VVV and DIEM.</p>
+            <p>See how much new VVV staking creates against what Venice burns, follow the monthly buybacks, and work out what staking or minting DIEM does for a holder.</p>
+            <div class="tags"><span>Updated daily</span><span>Open source</span></div>
+            <p class="project-disclosure">I hold and stake VVV.</p>
             <div class="project-links">
               <a href="https://vvv.watch/">Open VVV watch <span aria-hidden="true">→</span></a>
               <a class="source-link" href="https://github.com/provatidis/vvvwatch" target="_blank" rel="noopener noreferrer" aria-label="VVV watch source on GitHub">Source <span aria-hidden="true">↗</span></a>
