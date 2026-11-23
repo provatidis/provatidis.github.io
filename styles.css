@@ -712,7 +712,7 @@ h3 {
 .overwatch-legend span:last-child {
   letter-spacing:.06em;
 }
-.project-overwatch .tags {
+.tags:has(+ .project-disclosure) {
   margin:0 0 14px;
 }
 .project-content .project-disclosure {
