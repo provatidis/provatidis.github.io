@@ -35,13 +35,14 @@
     { timeZone: 'UTC', day: 'numeric', month: 'short', ...(withYear ? { year: 'numeric' } : {}) });
   function show(window90) {
     const { minted, burned, start, end } = window90 || {};
-    if (!(Number.isFinite(minted) && minted > 0 && Number.isFinite(burned) && burned >= 0 && day.test(start) && day.test(end))) return;
+    if (!(Number.isFinite(minted) && minted >= 0 && Number.isFinite(burned) && burned >= 0 && day.test(start) && day.test(end))) return;
     if (end < document.getElementById('vvv-end').dateTime) return;
     const largest = Math.max(minted, burned);
+    const barWidth = value => largest === 0 ? '0%' : (value / largest * 100).toFixed(3) + '%';
     document.getElementById('vvv-issued').textContent = whole.format(minted) + ' VVV';
     document.getElementById('vvv-burned').textContent = whole.format(burned) + ' VVV';
-    document.getElementById('vvv-issued-row').style.setProperty('--bar-width', (100 * minted / largest).toFixed(3) + '%');
-    document.getElementById('vvv-burned-row').style.setProperty('--bar-width', (100 * burned / largest).toFixed(3) + '%');
+    document.getElementById('vvv-issued-row').style.setProperty('--bar-width', barWidth(minted));
+    document.getElementById('vvv-burned-row').style.setProperty('--bar-width', barWidth(burned));
     const from = document.getElementById('vvv-start'), to = document.getElementById('vvv-end');
     from.dateTime = start;
     from.textContent = label(start, start.slice(0, 4) !== end.slice(0, 4));
