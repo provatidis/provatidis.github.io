@@ -27,6 +27,12 @@
   --overwatch-muted:#55605a;
   --overwatch-ink:#0e1511;
   --overwatch-accent:#4f7a16;
+  --vvv-paper:#f1efe8;
+  --vvv-ink:#12282a;
+  --vvv-muted:#526565;
+  --vvv-accent:#0f6b66;
+  --vvv-issued:#2a78d6;
+  --vvv-burned:#d05b2b;
   --serif:Georgia,'Times New Roman',serif;
   --sans:'Helvetica Neue',Arial,sans-serif;
   color-scheme:light;
@@ -62,6 +68,12 @@
   --overwatch-muted:#9aa69c;
   --overwatch-ink:#e9ede3;
   --overwatch-accent:#c6f05b;
+  --vvv-paper:#0b1517;
+  --vvv-ink:#eef2e9;
+  --vvv-muted:#adc1be;
+  --vvv-accent:#70d4c7;
+  --vvv-issued:#7db2ff;
+  --vvv-burned:#fc9864;
   color-scheme:dark;
 }
 @media(prefers-color-scheme:dark) {
@@ -92,6 +104,12 @@
     --overwatch-muted:#9aa69c;
     --overwatch-ink:#e9ede3;
     --overwatch-accent:#c6f05b;
+    --vvv-paper:#0b1517;
+    --vvv-ink:#eef2e9;
+    --vvv-muted:#adc1be;
+    --vvv-accent:#70d4c7;
+    --vvv-issued:#7db2ff;
+    --vvv-burned:#fc9864;
     color-scheme:dark;
   }
 }
@@ -621,32 +639,33 @@ h3 {
 .gaugecraft-legend span:last-child {
   letter-spacing:.06em;
 }
-.overwatch-visual {
-  background:var(--overwatch-paper);
-  color:var(--overwatch-muted);
+.overwatch-visual,.vvv-visual {
   padding:28px;
   min-height:365px;
   border-right:1px solid var(--line);
   display:flex;
   flex-direction:column;
 }
-.overwatch-visual .visual-label {
+.overwatch-visual {
+  background:var(--overwatch-paper);
+  color:var(--overwatch-muted);
+}
+.overwatch-visual .visual-label,.overwatch-wordmark {
   color:var(--overwatch-ink);
 }
-.overwatch-wordmark {
+.overwatch-wordmark,.vvv-wordmark {
   display:inline-flex;
   align-items:center;
   gap:10px;
-  color:var(--overwatch-ink);
   font-size:25px;
   font-weight:600;
   letter-spacing:-.04em;
   line-height:40px;
 }
-.overwatch-wordmark svg {
+.overwatch-wordmark svg,.vvv-wordmark svg {
   flex:none;
 }
-.overwatch-wordmark em {
+.overwatch-wordmark em,.vvv-wordmark em {
   font-family:var(--serif);
   font-weight:400;
   letter-spacing:-.02em;
@@ -701,6 +720,53 @@ h3 {
 }
 .project-disclosure + .project-links {
   margin-top:0;
+}
+.vvv-visual {
+  background:var(--vvv-paper);
+  color:var(--vvv-ink);
+}
+.vvv-token {
+  font-kerning:none;
+  letter-spacing:.035em;
+}
+.vvv-ledger {
+  margin:auto 0;
+  padding-top:28px;
+  font-size:14px;
+  line-height:1.5;
+}
+.vvv-ledger figcaption {
+  font-weight:500;
+}
+.vvv-amounts {
+  display:grid;
+  gap:18px;
+  margin:22px 0;
+}
+.vvv-amounts > div {
+  display:grid;
+  grid-template-columns:1fr auto;
+  row-gap:6px;
+}
+.vvv-amounts dd {
+  margin:0;
+  font-variant-numeric:tabular-nums;
+}
+.vvv-amounts > div::after {
+  content:"";
+  grid-column:1 / -1;
+  width:var(--bar-width,100%);
+  height:10px;
+  border-radius:0 2px 2px 0;
+  background:var(--vvv-issued);
+}
+.vvv-amounts > .vvv-burned::after {
+  background:var(--vvv-burned);
+}
+.vvv-ledger p {
+  margin:0;
+  color:var(--vvv-muted);
+  font-size:12px;
 }
 .about-section {
   margin-top:0;
@@ -943,7 +1009,7 @@ h3 {
     min-height:0;
     padding:25px;
   }
-  .gaugecraft-visual,.overwatch-visual {
+  .gaugecraft-visual,.overwatch-visual,.vvv-visual {
     border-right:0;
     border-bottom:1px solid var(--line);
     min-height:0;
